@@ -1,120 +1,105 @@
 # YelpCamp 
 
-YelpCamp is a dynamic multi-page website utilizing server-side rendering and data persistence.
+> YelpCamp is a dynamic multi-page web app utilizing server-side rendering and data persistence.
+> Live demo [_here_](https://cryptic-falls-28870.herokuapp.com/).
 
 
 ## Table of Contents 
 
+* [General Information](#general-information)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Future Development](#future-development)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+* [License](#license)
 
 
-## Project Description
+## General Information
+- General info about project
+- purpose of project
+- What was your motivation?
+- Why did you build this project?
+- What problem does it solve?
+- What did you learn?
+- What makes your project stand out?
+- What features does it have?
+- Challenges
+- Scope of functionalities 
 
-### Summary:
 
-What was your motivation?
-Why did you build this project?
-What problem does it solve?
-What did you learn?
-What makes your project stand out?
-What features does it have?
+## Technologies:
+The following technologies were used in building this web app: 
 
-### Technologies:
 - HTML/CSS
 - JavaScript
-- Bootstrap
+- Bootstrap(version): for front-end styling purposes
 - EJS
 - MongoDB
 - MapBox
 
-### What YelpCamp Does:
 
-YelpCamp utilizes server-side rendering and data persistence with MongoDB in order for app users to read, create, edit, and delete a database of campgrounds around America. 
+## Features
+- YelpCamp utilizes server-side rendering and data persistence with MongoDB in order for app users to read, create, edit, and delete a database of campgrounds around America. 
+- The goal of this app is to provide a community resource for users in order to help people find, rate, and add campgrounds.  The hope is that more people would enjoy camping in beautiful camping locations.
 
-The goal of this app is to provide a community resource for users in order to help people find, rate, and add campgrounds.  The hope is that more people would enjoy camping in beautiful camping locations.
+## Screenshots
 
-### Why These Technologies?
 
-- Bootstrap: 
-- MapBox:
-
-### Challenges 
-
-- Learning all of these technologies
-- Learning git and GitHub
-- Seeing both the forest and the trees
-
-### Future Possible Features to Implement
-- [x] Push to GitHub
-- [ ] Dark Mode
-- [ ] Move Helmet (Express.js security with HTTP headers) into separate file
-
-## Install and Launch 
-
-### Running Locally:
-
+## Setup
+- Project requirements/dependencies
+- Where are they listed? Where is this located?
+- Describe how to install / set up local enviroment to get started with project
 - Fork project
 - Download dependencies:
-
-### Go to Hosted App in Browser:
-
-- Website: 
-
-## How to Use the Project
-
-- Instructions
+- minimum hardware reqs?
+- input data? what format?
 - Examples 
 - Screenshots
 - Structure/Design principles utilized
 - Authentication: passwords/usernames 
 
-## Credits
+## Usage
+- How does one start using project?
+- Various use cases and code examples
+- tests?
 
-Credit is due to Colt Steele and the team at The Web Developer Bootcamp 2022.  This team designed this project and Colt leads students through every step of building it throughout his Udemy course. 
+`write-your-code-here`
 
-## Tests:
+## Project Status
+This YelpCamp project is: _in progress_.
 
-- Code Examples
-- How to Run Tests 
+## Future Development
+Room for Improvement:
+- Refactor code
+- Move Helmet into separate file
+
+Possible New Features:
+- [ ] Dark Mode
+- [ ] Move Helmet (Express.js security with HTTP headers) into separate file
+
+
+## Acknowledgements 
+- This web app project was based on the tuturial in [The Web Developer Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/).
+- Many thanks to Colt Steele, his team, and Udemy
+
+
+## Contact
+Created by [Paul Daniel Przybylowski](https://paulprzybylowski.github.io)
+
 
 ## License 
-MIT License
-
-Copyright (c) [year] [fullname]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This project is open source and available under the [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt).
 
 
 
-### Other Possible Sections for README:
 
-Titles and internal titles
-Introduction - the project's aim
-Technologies
-Launch
 
-Table of contents
-Illustrations
-Scope of functionalities 
-Examples of use
-Project status 
-Sources
-Other information
+
 
 
 
