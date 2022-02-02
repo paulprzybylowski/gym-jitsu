@@ -1,12 +1,15 @@
-# YelpCamp
+# YelpCamp 
+
+YelpCamp is a dynamic multi-page website utilizing server-side rendering and data persistence.
+
+
+## Table of Contents 
+
 
 
 ## Project Description
 
 ### Summary:
-
-YelpCamp is a dynamic multi-page website project utilizing server-side rendering and data persistence.
-
 
 What was your motivation?
 Why did you build this project?
@@ -14,8 +17,6 @@ What problem does it solve?
 What did you learn?
 What makes your project stand out?
 What features does it have?
-
-
 
 ### Technologies:
 - HTML/CSS
@@ -47,20 +48,16 @@ The goal of this app is to provide a community resource for users in order to he
 - [ ] Dark Mode
 - [ ] Move Helmet (Express.js security with HTTP headers) into separate file
 
-
-
-## How to Install and Run the Project
+## Install and Launch 
 
 ### Running Locally:
 
 - Fork project
 - Download dependencies:
 
-
 ### Go to Hosted App in Browser:
 
 - Website: 
-
 
 ## How to Use the Project
 
@@ -74,13 +71,10 @@ The goal of this app is to provide a community resource for users in order to he
 
 Credit is due to Colt Steele and the team at The Web Developer Bootcamp 2022.  This team designed this project and Colt leads students through every step of building it throughout his Udemy course. 
 
-
-
 ## Tests:
 
 - Code Examples
 - How to Run Tests 
-
 
 ## License 
 MIT License
@@ -107,8 +101,20 @@ SOFTWARE.
 
 
 
+### Other Possible Sections for README:
 
+Titles and internal titles
+Introduction - the project's aim
+Technologies
+Launch
 
+Table of contents
+Illustrations
+Scope of functionalities 
+Examples of use
+Project status 
+Sources
+Other information
 
 
 
