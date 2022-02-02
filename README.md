@@ -48,7 +48,7 @@ The following technologies were used in building this web app:
 - The goal of this app is to provide a community resource for users in order to help people find, rate, and add campgrounds.  The hope is that more people would enjoy camping in beautiful camping locations.
 
 ## Screenshots
-
+![Screenshot of Landing Page](./images/screenshot1.png)
 
 ## Setup
 - Project requirements/dependencies
