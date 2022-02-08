@@ -21,9 +21,13 @@ const reviewRoutes = require('./routes/reviews');
 
 const MongoDBStore = require('connect-mongo')(session);
 
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 
-mongoose.connect(dbUrl, {});
+
+//const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+
+
+
+mongoose.connect('mongodb://localhost:27017/yelp-camp', {});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -54,21 +58,21 @@ app.use(mongoSanitize({
 const secret = process.env.SECRET || 'secret!';
 
 
-const store = new MongoDBStore({
-    url: dbUrl,
-    secret,
-    touchAfter: 24 * 60 * 60,
-});
+// const store = new MongoDBStore({
+//     url: dbUrl,
+//     secret,
+//     touchAfter: 24 * 60 * 60,
+// });
 
 
-store.on("error", function(e){
-    console.log("session store error", e)
-})
+// store.on("error", function(e){
+//     console.log("session store error", e)
+// })
 
 
 
 const sessionConfig = {
-    store,
+    // store,
     name: 'session',
     secret,
     resave: false,
@@ -85,6 +89,59 @@ app.use(session(sessionConfig))
 app.use(flash());
 app.use(helmet({ crossOriginEmbedderPolicy: false }));
 
+
+
+
+
+const scriptSrcUrls = [
+    "https://stackpath.bootstrapcdn.com",
+    "https://api.tiles.mapbox.com",
+    "https://api.mapbox.com",
+    "https://kit.fontawesome.com",
+    "https://cdnjs.cloudflare.com",
+    "https://cdn.jsdelivr.net",
+];
+const styleSrcUrls = [
+    "https://kit-free.fontawesome.com",
+    "https://stackpath.bootstrapcdn.com",
+    "https://api.mapbox.com",
+    "https://api.tiles.mapbox.com",
+    "https://fonts.googleapis.com",
+    "https://use.fontawesome.com",
+    "https://cdn.jsdelivr.net", 
+];
+const connectSrcUrls = [
+    "https://api.mapbox.com",
+    "https://*.tiles.mapbox.com",
+    "https://events.mapbox.com",
+];
+const fontSrcUrls = [];
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: [],
+            connectSrc: ["'self'", ...connectSrcUrls],
+            scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
+            styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+            workerSrc: ["'self'", "blob:"],
+            childSrc: ["blob:"],
+            objectSrc: [],
+            imgSrc: [
+                "'self'",
+                "blob:",
+                "data:",
+                "https://res.cloudinary.com/dvfbu2gde/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://images.unsplash.com",
+            ],
+            fontSrc: ["'self'", ...fontSrcUrls],
+        },
+    })
+);
+
+
+
+
+/*
 const scriptSrcUrls = [
     "https://stackpath.bootstrapcdn.com/",
     "https://api.tiles.mapbox.com/",
@@ -117,6 +174,7 @@ app.use(
             scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
             styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
             workerSrc: ["'self'", "blob:"],
+            childSrc: ["blob:"],
             objectSrc: [],
             imgSrc: [
                 "'self'",
@@ -129,7 +187,7 @@ app.use(
         },
     })
 );
-
+*/
 
 
 app.use(passport.initialize());

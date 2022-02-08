@@ -4,11 +4,14 @@ const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 const Campground = require('../models/campground');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
-    useNewUrlParser: true,
-    // useCreateIndex: true,
-    useUnifiedTopology: true
-});
+
+if(process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+
+mongoose.connect(dbUrl, {});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
@@ -26,7 +29,7 @@ const seedDB = async () => {
         const camp = new Campground({
             
             //Your User ID
-            author: '61f970d42f3d1c41d0cd627f',
+            author: '61f953629046deefd34deb9e',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem sunt mollitia dolore velit. Consequatur quia nostrum recusandae, atque maiores laudantium? Ipsam quos aliquid quaerat a. Voluptatum quod possimus accusantium aliquid.",
