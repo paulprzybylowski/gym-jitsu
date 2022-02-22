@@ -1,21 +1,21 @@
-const Campground = require('../models/campground');
+const Gym = require('../models/gyms');
 const Review = require('../models/review');
 
 module.exports.createReview = async (req, res) => {
-    const campground = await Campground.findById(req.params.id);
+    const gym = await Gym.findById(req.params.id);
     const review = new Review(req.body.review);
     review.author = req.user._id;
-    campground.reviews.push(review);
+    gym.reviews.push(review);
     await review.save();
-    await campground.save();
-    req.flash('success', 'Created new review!');
-    res.redirect(`/campgrounds/${campground._id}`);
+    await gym.save();
+    req.flash('Success!', 'Created new review!');
+    res.redirect(`/gyms/${gym._id}`);
 }
 
 module.exports.deleteReview = async (req, res) => {
     const { id, reviewId } = req.params;
-    await Campground.findByIdAndUpdate(id, {$pull: { reviews: reviewId } })
+    await Gym.findByIdAndUpdate(id, {$pull: { reviews: reviewId } })
     await Review.findByIdAndDelete(reviewId);
-    req.flash('success', 'Deleted a review!');
-    res.redirect(`/campgrounds/${id}`);
+    req.flash('Success!', 'Deleted a review!');
+    res.redirect(`/gyms/${id}`);
 }

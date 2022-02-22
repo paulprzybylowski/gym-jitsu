@@ -2,14 +2,13 @@
 const mongoose = require('mongoose');
 const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
-const Campground = require('../models/campground');
-
+const Gym = require('../models/gyms');
 
 if(process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
+const dbUrl = 'mongodb://localhost:27017/gym-jitsu';
 
 mongoose.connect(dbUrl, {});
 
@@ -22,17 +21,17 @@ db.once("open", () => {
 const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
-    await Campground.deleteMany({});
-    for (let i = 0; i < 300; i++) {
+    await Gym.deleteMany({});
+    for (let i = 0; i < 10; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
-        const price = Math.floor(Math.random() * 20) + 10;
-        const camp = new Campground({
+        const price = Math.floor(Math.random() * 10) + 5;
+        const gym = new Gym({
             
             //Your User ID
-            author: '61f953629046deefd34deb9e',
+            author: '6206a8eac5ebfc4d3574e9ad',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem sunt mollitia dolore velit. Consequatur quia nostrum recusandae, atque maiores laudantium? Ipsam quos aliquid quaerat a. Voluptatum quod possimus accusantium aliquid.",
+            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem sunt mollitia dolore velit. Ipsam quos aliquid quaerat a. Voluptatum quod possimus accusantium aliquid.",
             price,
             geometry: {
               type: "Point",
@@ -43,17 +42,21 @@ const seedDB = async () => {
             },
             images: [
                 {
-                  url: 'https://res.cloudinary.com/dvfbu2gde/image/upload/v1643736174/YelpCamp/mzlauibqgryiezw0zu3h.jpg',
-                  filename: 'YelpCamp/mzlauibqgryiezw0zu3h'
+                  url: 'https://res.cloudinary.com/dvfbu2gde/image/upload/v1644604210/GymJitsu/gym1_utlq99.jpg',
+                  filename: 'GymJitsu/gym1_utlq99'
                 },
+              
                 {
-                  url: 'https://res.cloudinary.com/dvfbu2gde/image/upload/v1643736174/YelpCamp/o5hmxkeqlwqe2msjxfy8.jpg',
-                  filename: 'YelpCamp/o5hmxkeqlwqe2msjxfy8'
+                  url: 'https://res.cloudinary.com/dvfbu2gde/image/upload/v1644604210/GymJitsu/gym2_ktetos.jpg',
+                  filename: 'GymJitsu/gym2_ktetos'
                 }
+                
               ]
         })
-        await camp.save();
+        await gym.save();
     }
 }
 
-seedDB();
+seedDB().then(() => {
+  mongoose.connection.close();
+})

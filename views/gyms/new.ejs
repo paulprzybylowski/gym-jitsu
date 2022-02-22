@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<link rel="stylesheet" href="/stylesheets/images.css" class="rel">
+
+<div class="row">
+    <h1 class="text-center">New Gym</h1>
+    <div class="col-md-6 offset-md-3">
+        
+        <form action="/gyms" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="gym[title]" required>
+                <div class="valid-feedback">Look's great!</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location (City, State)</label>
+                <input class="form-control" type="text" id="location" name="gym[location]" required>
+                <div class="valid-feedback">Look's great!</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="price">Gym Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="Username"
+                        aria-describedby="price-label" name="gym[price]" required>
+                </div>
+                <div class="valid-feedback">Look's great!</div>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="gym[description]"
+                    required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="">Upload Images</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="image" name="image" multiple onchange="previewMultiple(event)">
+                    <label class="custom-file-label" for="image"></label>
+                </div>
+                <div id="formFile"></div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-warning">Add Gym</button>
+            </div>
+            <div class="valid-feedback">Look's great!</div>
+        </form>
+        <a href="/index">All Gyms</a>
+    </div>
+    
+</div>
