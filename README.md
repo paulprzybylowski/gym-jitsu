@@ -1,6 +1,7 @@
 # GymJitsu
 
-> GymJitsu is a dynamic, multi-page web app utilizing server-side rendering and data persistence.
+> GymJitsu is a dynamic multi-page Express web app with server-side rendering and data persistence using MongoDB. GymJitsu is a business directory app focused on Jiu-Jitsu gyms. The app encourages users to view, add, and rate Jiu-Jitsu gyms. 
+
 > Live demo [_here_]().
 
 ## Table of Contents
@@ -8,7 +9,6 @@
 - [General Information](#general-information)
 - [Technologies](#technologies)
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Setup](#setup)
 - [Usage](#usage)
 - [Project Status](#project-status)
@@ -34,21 +34,21 @@
 
 The following technologies were used in building this web app:
 
-- HTML/CSS
-- JavaScript
-- Bootstrap(version): for front-end styling purposes
-- EJS
-- MongoDB
-- MapBox
+- HTML 5 / CSS 3
+- JavaScript ES6
+- Express.js @4.17.1
+- Bootstrap @5.1.3
+- EJS @3.1.6
+- Mongoose @6.0.13 / MongoDB
+- MapBox API
+- Cloudinary API 
 
 ## Features
 
-- YelpCamp utilizes server-side rendering and data persistence with MongoDB in order for app users to read, create, edit, and delete a database of campgrounds around America.
-- The goal of this app is to provide a community resource for users in order to help people find, rate, and add campgrounds. The hope is that more people would enjoy camping in beautiful camping locations.
-
-## Screenshots
-
-![Screenshot of Landing Page](./images/screenshot1.png)
+- View Jiu-Jitsu gyms from MongoDB on browser via interactive MapBox map and scrolling list 
+- User authentication for login and logout
+- User authorization to allow users to add, update, write reviews, and set star rating for gyms 
+- Upload photos for gyms to Cloudinary
 
 ## Setup
 
@@ -78,15 +78,11 @@ This YelpCamp project is: _in progress_.
 
 ## Future Development
 
-Room for Improvement:
-
-- Refactor code
-- Move Helmet into separate file
-
 Possible New Features:
 
 - [ ] Dark Mode
-- [ ] Move Helmet (Express.js security with HTTP headers) into separate file
+- [ ] Move Helmet middleware into separate file (Helmet helps secure Express apps by setting various HTTP headers)
+- [ ] Limit upload size and/or number of photos to Cloudinary
 
 ## Acknowledgements
 
