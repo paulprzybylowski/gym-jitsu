@@ -2,7 +2,7 @@
 
 GymJitsu is a dynamic multi-page Express web app with server-side rendering and data persistence using MongoDB. GymJitsu is a business directory app focused on Jiu-Jitsu gyms. The app encourages users to view, add, and rate Jiu-Jitsu gyms. 
 
-Live demo [_here_]().
+Live app demo hosted on Heroku [here](). Screencast available in my portfolio [here]().
 
 ## Table of Contents
 
