@@ -69,11 +69,11 @@ The following technologies were used in building this web app:
 - Unzip folder
 - Open command-line interface, then... 
 
-`cd [location of unzipped repository]`
-
-`touch .env` 
-
-`npm install dotenv`
+```
+cd [location of unzipped repository]
+touch .env
+npm install dotenv
+```
 
 - Open project folder in IDE (eg VSCode)
 - Note than project dependencies are listed in package.json
@@ -86,9 +86,11 @@ The following technologies were used in building this web app:
 - Open .env file in your IDE:
 - Add these items to your .env file (copied from your Cloudinary Account Details page:
 
-`CLOUDINARY_CLOUD_NAME=[paste your Cloud Name here]`
-`CLOUDINARY_KEY=[paste your API Key here]`
-`CLOUDINARY_SECRET=[paste your API Secret here]`
+```
+CLOUDINARY_CLOUD_NAME=[paste your Cloud Name here]
+CLOUDINARY_KEY=[paste your API Key here]
+CLOUDINARY_SECRET=[paste your API Secret here]
+```
 
 - Navigate to https://mapbox.com/ in browser
 - Set up personal Mapbox free account, login, navigate to Tokens, copy Default public token (or create a custom token)
@@ -104,21 +106,37 @@ The following technologies were used in building this web app:
 
 `mongoose.connect('mongodb://localhost:27017/gym-jitsu', {});`
 
-- The app database will not be populated on your local machine. Therefore, localhost:3000/gyms will not show any gyms on the map or in a list below the map. If you would like to populate your database with some seed data, run this command in your terminal:
+- The app database will not be populated on your local machine. Therefore, localhost:3000/gyms will not show any gyms on the map or in a list below the map. You can begin to add gyms by creating new users and then gyms. If you would like to populate your gym database with some seed data, run this command in your terminal:
 
 `node seeds/index.js`
 
 - Create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
 
-`mongo`
-`show dbs`
-`use gym-jitsu`
-`show collections`
-`use users`
-`db.users.find()`
+```
+mongo
+show dbs
+use gym-jitsu
+show collections
+use users
+db.users.find()
+```
 
-- Copy the ObjectId of the user you created and paste it into seeds/index.js in the 'author' section of the seedDB function 
-- Go to Cloudinary account in browserm, click Media Library, 
+- Copy the ObjectId of the user you created and paste it into seeds/index.js in the 'author' section of the seedDB function.
+- If you'd like to add seed photos to the app database, go to your Cloudinary account in browser, click Media Library, upload photos, copy the url and filename for these photos, paste urls and filenames in seeds/index.js within 'images' inside seedDB function. For example:
+
+```
+images: [
+    {
+      url: '[insert photo url to Cloudinary]',
+      filename: '[insert filename from Cloudinary]'
+    },
+       ]
+```
+- Now you can run the seeds file in your terminal to populate the database with seed gyms:
+
+`node seeds/index.js`
+
+- If seeding the database worked correctly, you will now see seed gyms in the map and the text list in your browser at localhost:3000/gyms. Each gym will have a populated name, lorem ipsum text block, location (city,state), price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
 
 ## Project Status
 
@@ -126,7 +144,7 @@ This YelpCamp project is: _in progress_.
 
 ## Future Development
 
-Possible New Features:
+Ideas for Additional Features:
 
 - [ ] Dark Mode
 - [ ] Move Helmet middleware into separate file (Helmet helps secure Express apps by setting various HTTP headers)
@@ -135,15 +153,12 @@ Possible New Features:
 ## Acknowledgements
 
 - This web app project was based on the tuturial in [The Web Developer Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/).
-- Many thanks to Colt Steele, his team, and Udemy
+- Many thanks to instructor Colt Steele and his team
 
 ## Contact
 
-Created by [Paul Daniel Przybylowski](https://paulprzybylowski.github.io)
+[Paul Daniel Przybylowski](https://paulprzybylowski.github.io)
 
 ## License
 
 This project is open source and available under the [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt).
-
-Notes:
-https://shields.io/
