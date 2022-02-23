@@ -132,7 +132,11 @@ images: [
 
 `node seeds/index.js`
 
-- If seeding the database worked correctly, you will now see seed gyms in the map and the text list in your browser at localhost:3000/gyms. Each gym will have a populated name, lorem ipsum text block, location(city,state) and map, price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
+- Now run the app from your terminal:
+
+`node app.js`
+
+- In your browser, navigate to localhost:3000. If seeding the database worked correctly, you will see seed gyms in the map and the scroling gym list at: localhost:3000/gyms. Each gym should have a populated name, lorem ipsum text block, location(city,state) and map, price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
 
 ## Project Status
 
