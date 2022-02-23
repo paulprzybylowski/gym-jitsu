@@ -60,17 +60,65 @@ The following technologies were used in building this web app:
 - minimum hardware reqs?
 - input data? what format?
 - Examples
-- Screenshots
 - Structure/Design principles utilized
 - Authentication: passwords/usernames
 
-## Usage
+## Setup to Run Locally 
 
-- How does one start using project?
-- Various use cases and code examples
-- tests?
+- Download ZIP of repository on Github
+- Unzip folder
+- Open command-line interface, then... 
 
-`write-your-code-here`
+`cd [location of unzipped repository]`
+
+`touch .env` 
+
+`npm install dotenv`
+
+- Open project folder in IDE (eg VSCode)
+- Note than project dependencies are listed in package.json
+- In command-line run to download dependencies:
+
+`npm install`
+
+- Navigate to https://cloudinary.com/ in browser
+- Set up personal Cloudinary free account, login, navigate to Account Details
+- Open .env file in your IDE:
+- Add these items to your .env file (copied from your Cloudinary Account Details page:
+
+`CLOUDINARY_CLOUD_NAME=[paste your Cloud Name here]`
+`CLOUDINARY_KEY=[paste your API Key here]`
+`CLOUDINARY_SECRET=[paste your API Secret here]`
+
+- Navigate to https://mapbox.com/ in browser
+- Set up personal Mapbox free account, login, navigate to Tokens, copy Default public token (or create a custom token)
+- Add this item to your .env file (copied from Mapbox):
+
+`MAPBOX_TOKEN=[paste your Default public token here]`
+
+- Open app.js file in IDE and comment out this line:
+
+`// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/gym-jitsu';`
+
+- Remove comment from this line:
+
+`mongoose.connect('mongodb://localhost:27017/gym-jitsu', {});`
+
+- The app database will not be populated on your local machine. Therefore, localhost:3000/gyms will not show any gyms on the map or in a list below the map. If you would like to populate your database with some seed data, run this command in your terminal:
+
+`node seeds/index.js`
+
+- Create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
+
+`mongo`
+`show dbs`
+`use gym-jitsu`
+`show collections`
+`use users`
+`db.users.find()`
+
+- Copy the ObjectId of the user you created and paste it into seeds/index.js in the 'author' section of the seedDB function 
+- Go to Cloudinary account in browserm, click Media Library, 
 
 ## Project Status
 
