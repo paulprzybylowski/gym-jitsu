@@ -140,7 +140,7 @@ images: [
 
 ## Project Status
 
-This YelpCamp project is: _complete_.
+This GymJitsu project is: _complete_!
 
 ## Future Development
 
