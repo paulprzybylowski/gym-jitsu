@@ -1,16 +1,14 @@
 # GymJitsu
 
-> GymJitsu is a dynamic multi-page Express web app with server-side rendering and data persistence using MongoDB. GymJitsu is a business directory app focused on Jiu-Jitsu gyms. The app encourages users to view, add, and rate Jiu-Jitsu gyms. 
+GymJitsu is a dynamic multi-page Express web app with server-side rendering and data persistence using MongoDB. GymJitsu is a business directory app focused on Jiu-Jitsu gyms. The app encourages users to view, add, and rate Jiu-Jitsu gyms. 
 
-> Live demo [_here_]().
+Live demo [_here_]().
 
 ## Table of Contents
 
 - [General Information](#general-information)
 - [Technologies](#technologies)
 - [Features](#features)
-- [Setup](#setup)
-- [Usage](#usage)
 - [Project Status](#project-status)
 - [Future Development](#future-development)
 - [Acknowledgements](#acknowledgements)
@@ -19,16 +17,25 @@
 
 ## General Information
 
-- General info about project
-- purpose of project
-- What was your motivation?
-- Why did you build this project?
-- What problem does it solve?
-- What did you learn?
-- What makes your project stand out?
-- What features does it have?
-- Challenges
-- Scope of functionalities
+### Why did you initially build this project?
+
+> I initially built this project in completion of [The Web Developer Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/). Then I further modified the project and applied it to a particular industry that I'm interested in.
+
+### What problem does this project solve?
+
+> It can be difficult for people to find excellent Jiu-Jitsu gyms. This app helps people to find Jiu-Jitsu gyms that other users have rated and reviewed as well as add additional gyms to grow this athletic sports community. 
+
+### What did you learn?
+
+> While building this project, I learned how to create an Express.js web app with a MongoDB back-end. Additionally, I gained experience using the MapBox and Cloudinary APIs. I reviewed deployment to Heroku and gained technical writing experience with this README. 
+
+### What makes your project stand out?
+
+> This project stands out due to its elegant functionality and UI. 
+
+### Were there any particular challenges in this project?
+
+> This project was challenging all around, but well worth the time and effort! 
 
 ## Technologies:
 
@@ -39,35 +46,30 @@ The following technologies were used in building this web app:
 - Express.js @4.17.1
 - Bootstrap @5.1.3
 - EJS @3.1.6
-- Mongoose @6.0.13 / MongoDB
+- MongoDB
+- Mongoose @6.0.13
+- Helmet @5.0.2
+- Joi @17.4.2
+- Passport authentication
 - MapBox API
 - Cloudinary API 
 
+See all dependencies in package.json.
+
 ## Features
 
-- View Jiu-Jitsu gyms from MongoDB on browser via interactive MapBox map and scrolling list 
+- Ability to view Jiu-Jitsu gyms served from MongoDB on browser via interactive MapBox API map and scrolling list 
 - User authentication for login and logout
 - User authorization to allow users to add, update, write reviews, and set star rating for gyms 
 - Upload photos for gyms to Cloudinary
 
 ## Setup
 
-- Project requirements/dependencies
-- Where are they listed? Where is this located?
-- Describe how to install / set up local enviroment to get started with project
-- Fork project
-- Download dependencies:
-- minimum hardware reqs?
-- input data? what format?
-- Examples
-- Structure/Design principles utilized
-- Authentication: passwords/usernames
+### How to Run Locally
 
-## Setup to Run Locally 
-
-- Download ZIP of repository on Github
+- Fork project on Github and download ZIP of repository
 - Unzip folder
-- Open command-line interface, then... 
+- Open your command-line interface, then... 
 
 ```
 cd [location of unzipped repository]
@@ -80,6 +82,8 @@ npm install dotenv
 - In command-line run to download dependencies:
 
 `npm install`
+
+### Connecting Cloudinary and MapBox to App
 
 - Navigate to https://cloudinary.com/ in browser
 - Set up personal Cloudinary free account, login, navigate to Account Details
@@ -98,17 +102,24 @@ CLOUDINARY_SECRET=[paste your API Secret here]
 
 `MAPBOX_TOKEN=[paste your Default public token here]`
 
-- Open app.js file in IDE and comment out this line:
+### Setting up Local Database
+
+- Open app.js file in IDE and comment out this line (type '//' at start of line):
 
 `// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/gym-jitsu';`
 
-- Remove comment from this line:
+- Remove comments from this lines (delete '//'):
 
-`mongoose.connect('mongodb://localhost:27017/gym-jitsu', {});`
+```
+const dbUrl = 'mongodb://localhost:27017/gym-jitsu
+```
 
-- The app database will not be populated on your local machine. Therefore, localhost:3000/gyms will not show any gyms on the map or in a list below the map. You can begin to add gyms by creating new users and then gyms. If you would like to populate your gym database with some seed data, run this command in your terminal:
+### Seeding Database with Gyms 
 
-`node seeds/index.js`
+- The app database will empty on your local machine. Therefore, localhost:3000/gyms will not display any gyms on the map or in a scrolling list below the map. You can begin to add gyms by creating new users and then create gyms with these users.
+- If you would like to populate your gym database with some seed gyms, first create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
+
+
 
 - Create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
 
@@ -122,7 +133,7 @@ db.users.find()
 ```
 
 - Copy the ObjectId of the user you created and paste it into seeds/index.js in the 'author' section of the seedDB function.
-- If you'd like to add seed photos to the app database, go to your Cloudinary account in browser, click Media Library, upload photos, copy the url and filename for these photos, paste urls and filenames in seeds/index.js within 'images' inside seedDB function. For example:
+- If you'd like to add seed photos to the app database, go to your Cloudinary account in browser, click Media Library, upload photos, copy the url and filename for these photos, paste urls and filenames in seeds/index.js within 'images' inside the seedDB function. For example:
 
 ```
 images: [
@@ -132,15 +143,16 @@ images: [
     },
        ]
 ```
-- Now you can run the seeds file in your terminal to populate the database with seed gyms:
+
+- Now you can run the seeds file in your terminal to populate the database with seed gyms associated with the user you created:
 
 `node seeds/index.js`
 
-- If seeding the database worked correctly, you will now see seed gyms in the map and the text list in your browser at localhost:3000/gyms. Each gym will have a populated name, lorem ipsum text block, location (city,state), price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
+- If seeding the database worked correctly, you will now see seed gyms in the map and the text list in your browser at localhost:3000/gyms. Each gym will have a populated name, lorem ipsum text block, location(city,state) and map, price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
 
 ## Project Status
 
-This YelpCamp project is: _in progress_.
+This YelpCamp project is: _complete_.
 
 ## Future Development
 
@@ -148,12 +160,13 @@ Ideas for Additional Features:
 
 - [ ] Dark Mode
 - [ ] Move Helmet middleware into separate file (Helmet helps secure Express apps by setting various HTTP headers)
-- [ ] Limit upload size and/or number of photos to Cloudinary
+- [ ] Limit upload file size and/or number of photos to Cloudinary
+- [ ] Limit number of gyms displayed on /gyms and integrate a 'Load more' button at the bottom
 
 ## Acknowledgements
 
 - This web app project was based on the tuturial in [The Web Developer Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/).
-- Many thanks to instructor Colt Steele and his team
+- Many thanks to instructor Colt Steele and his team.
 
 ## Contact
 
