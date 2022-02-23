@@ -138,6 +138,24 @@ images: [
 
 - In your browser, navigate to localhost:3000. If seeding the database worked correctly, you will see seed gyms in the map and the scroling gym list at: localhost:3000/gyms. Each gym should have a populated name, lorem ipsum text block, location(city,state) and map, price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
 
+### Additional Instructions
+
+- If you would like to add a secret password for MongoDB, you can add it in the .env file:
+
+`SECRET=[your password]`
+
+- In app.js, the included 'development-secret' could be deleted if you want:
+
+`const secret = process.env.SECRET || 'development-secret';`
+
+- If you would like to run the app on the cloud, you could uncomment this line in app.js:
+
+`// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/gym-jitsu';`
+
+- If you do this, you must also provide the URL within the .env file:
+
+`DB_URL=[your url]`
+
 ## Project Status
 
 This GymJitsu project is: _complete_!
