@@ -23,9 +23,10 @@ const MongoDBStore = require('connect-mongo')(session);
 
 const moment = require('moment');
 
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/gym-jitsu';
+// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/gym-jitsu';
+const dbUrl = 'mongodb://localhost:27017/gym-jitsu';
 
-// mongoose.connect('mongodb://localhost:27017/gym-jitsu', {});
+mongoose.connect('mongodb://localhost:27017/gym-jitsu', {});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
