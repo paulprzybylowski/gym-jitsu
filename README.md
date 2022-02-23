@@ -102,26 +102,10 @@ CLOUDINARY_SECRET=[paste your API Secret here]
 
 `MAPBOX_TOKEN=[paste your Default public token here]`
 
-### Setting up Local Database
-
-- Open app.js file in IDE and comment out this line (type '//' at start of line):
-
-`// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/gym-jitsu';`
-
-- Remove comments from this lines (delete '//'):
-
-```
-const dbUrl = 'mongodb://localhost:27017/gym-jitsu
-```
-
 ### Seeding Database with Gyms 
 
 - The app database will empty on your local machine. Therefore, localhost:3000/gyms will not display any gyms on the map or in a scrolling list below the map. You can begin to add gyms by creating new users and then create gyms with these users.
 - If you would like to populate your gym database with some seed gyms, first create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
-
-
-
-- Create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
 
 ```
 mongo
