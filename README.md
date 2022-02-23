@@ -1,6 +1,6 @@
 # GymJitsu
 
-GymJitsu is a dynamic multi-page Express web app with server-side rendering and data persistence using MongoDB. GymJitsu is a business directory app focused on Jiu-Jitsu gyms. The app encourages users to view, add, and rate Jiu-Jitsu gyms. 
+GymJitsu is a dynamic multi-page Express web app with server-side rendering and data persistence using MongoDB. GymJitsu is a business directory app focused on Jiu-Jitsu gyms. The app encourages users to view, add, and rate Jiu-Jitsu gyms.
 
 Live app demo hosted on Heroku [here](). Screencast available in my portfolio [here](https://paulprzybylowski.github.io/#projects).
 
@@ -23,19 +23,19 @@ Live app demo hosted on Heroku [here](). Screencast available in my portfolio [h
 
 ### What problem does this project solve?
 
-> It can be difficult for people to find excellent Jiu-Jitsu gyms. This app helps people to find Jiu-Jitsu gyms that other users have rated and reviewed as well as add additional gyms to grow this athletic sports community. 
+> It can be difficult for people to find excellent Jiu-Jitsu gyms. This app helps people to find Jiu-Jitsu gyms that other users have rated and reviewed as well as add additional gyms to grow this athletic sports community.
 
 ### What did you learn?
 
-> While building this project, I learned how to create an Express.js web app with a MongoDB back-end. Additionally, I gained experience using the MapBox and Cloudinary APIs. I reviewed deployment to Heroku and gained technical writing experience with this README. 
+> While building this project, I learned how to create an Express.js web app with a MongoDB back-end. Additionally, I gained experience using the MapBox and Cloudinary APIs. I reviewed deployment to Heroku and gained technical writing experience with this README.
 
 ### What makes your project stand out?
 
-> This project stands out due to its elegant functionality and UI. 
+> This project stands out due to its elegant functionality and UI.
 
 ### Were there any particular challenges in this project?
 
-> This project was challenging all around, but well worth the time and effort! 
+> This project was challenging all around, but well worth the time and effort!
 
 ## Technologies:
 
@@ -52,15 +52,15 @@ The following technologies were used in building this web app:
 - Joi @17.4.2
 - Passport authentication
 - MapBox API
-- Cloudinary API 
+- Cloudinary API
 
 See all dependencies in package.json.
 
 ## Features
 
-- Ability to view Jiu-Jitsu gyms served from MongoDB on browser via interactive MapBox API map and scrolling list 
+- Ability to view Jiu-Jitsu gyms served from MongoDB on browser via interactive MapBox API map and scrolling list
 - User authentication for login and logout
-- User authorization to allow users to add, update, write reviews, and set star rating for gyms 
+- User authorization to allow users to add, update, write reviews, and set star rating for gyms
 - Upload photos for gyms to Cloudinary
 
 ## Setup
@@ -69,7 +69,7 @@ See all dependencies in package.json.
 
 - Fork project on Github and download ZIP of repository
 - Unzip folder
-- Open your command-line interface, then... 
+- Open your command-line interface, then...
 
 ```
 cd [location of unzipped repository]
@@ -102,7 +102,7 @@ CLOUDINARY_SECRET=[paste your API Secret here]
 
 `MAPBOX_TOKEN=[paste your Default public token here]`
 
-### Seeding Database with Gyms 
+### Seeding Database with Gyms
 
 - The app database will empty on your local machine. Therefore, localhost:3000/gyms will not display any gyms on the map or in a scrolling list below the map. You can begin to add gyms by creating new users and then create gyms with these users.
 - If you would like to populate your gym database with some seed gyms, first create a new user in the app. This user will be saved in your Mongo database. Navigate to your database in your terminal:
@@ -136,7 +136,7 @@ images: [
 
 `node app.js`
 
-- In your browser, navigate to localhost:3000. If seeding the database worked correctly, you will see seed gyms in the map and the scroling gym list at: localhost:3000/gyms. Each gym should have a populated name, lorem ipsum text block, location(city,state) and map, price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database. 
+- In your browser, navigate to localhost:3000. If seeding the database worked correctly, you will see seed gyms in the map and the scroling gym list at: localhost:3000/gyms. Each gym should have a populated name, lorem ipsum text block, location(city,state) and map, price in dollars per class, submitted by @[your created username], and time elapsed since the gym was created in the database.
 
 ### Additional Instructions
 
@@ -173,6 +173,7 @@ Ideas for Additional Features:
 
 - This web app project was based on the tuturial in [The Web Developer Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/).
 - Many thanks to instructor Colt Steele and his team.
+- Thank you to Unsplash for the photos utilized in this app.
 
 ## Contact
 

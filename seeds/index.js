@@ -28,7 +28,7 @@ const seedDB = async () => {
         const gym = new Gym({
             
             //Your User ID
-            author: '6206a8eac5ebfc4d3574e9ad',
+            author: '',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem sunt mollitia dolore velit. Ipsam quos aliquid quaerat a. Voluptatum quod possimus accusantium aliquid.",
@@ -42,13 +42,13 @@ const seedDB = async () => {
             },
             images: [
                 {
-                  url: 'https://res.cloudinary.com/dvfbu2gde/image/upload/v1644604210/GymJitsu/gym1_utlq99.jpg',
-                  filename: 'GymJitsu/gym1_utlq99'
+                  url: '',
+                  filename: ''
                 },
               
                 {
-                  url: 'https://res.cloudinary.com/dvfbu2gde/image/upload/v1644604210/GymJitsu/gym2_ktetos.jpg',
-                  filename: 'GymJitsu/gym2_ktetos'
+                  url: '',
+                  filename: ''
                 }
                 
               ]
