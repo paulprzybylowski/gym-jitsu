@@ -186,8 +186,8 @@ Ideas for Additional Features:
 ## Acknowledgements
 
 - This web app project was based on the tuturial in [The Web Developer Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/).
-- Many thanks to instructor Colt Steele and his team.
-- Thank you to Unsplash for the photos utilized in this app.
+- Many thanks to instructor [Colt Steele](https://github.com/Colt) and his team.
+- Thank you to [Unsplash](https://unsplash.com/) for the photos utilized in this app.
 
 ## Contact
 
