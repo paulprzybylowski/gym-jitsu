@@ -42,6 +42,7 @@ Live app demo hosted on Heroku [here](). Screencast available in my portfolio [h
 The following technologies were used in building this web app:
 
 - **Express.js**: minimal and flexible Node.js web application framework
+
 - **Mongoose**: elegant MongoDB object modeling for Node.js
 - **EJS**: embedded JavaScript templates, simple templating language to generate HTML markup with plain JavaScript
 - **NodeJS**: back-end JavaScript runtime build on Chrome's V8 JavaScript engine, executes JS code outside a web browser   
