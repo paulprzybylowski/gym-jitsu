@@ -41,19 +41,29 @@ Live app demo hosted on Heroku [here](). Screencast available in my portfolio [h
 
 The following technologies were used in building this web app:
 
-- NodeJS & NPM
-- HTML 5 / CSS 3
-- JavaScript ES6
-- Express.js @4.17.1
-- Bootstrap @5.1.3
-- EJS @3.1.6
-- MongoDB
-- Mongoose @6.0.13
-- Helmet @5.0.2
-- Joi @17.4.2
-- Passport Authentication
-- MapBox API for Geocoding & Maps
-- Cloudinary API for Image Upload
+- **Express.js**: minimal and flexible Node.js web application framework
+- **Mongoose**: elegant MongoDB object modeling for Node.js
+- **EJS**: embedded JavaScript templates, simple templating language to generate HTML markup with plain JavaScript
+- **NodeJS**: back-end JavaScript runtime build on Chrome's V8 JavaScript engine, executes JS code outside a web browser   
+- **NPM**: node package manager, package manager for JavaScript, default package manager for Node.js
+- **HTML5**: HyperText Markup Language, defines the meaning and structure of web content
+- **CSS3**: Cascading Style Sheets, stylesheet language that describes presentation of a document written in HTML/XML
+- **JavaScript**: lightweight, interpreted, or just-in-time compiled programming language with first-class functions; scripting language for Web pages 
+- **Bootstrap**: CSS framework for responsive, mobile-first front-end web development
+- **Joi**: schema description language and data validator for JavaScript 
+- **MongoDB**: NoSQL document database program 
+- **Express-Session**: Node.js module to implement session in Express app
+- **Connect-Flash**: messages are written to the flash (special area of session) and displayed to user
+- **Bcrypt**: library to hash passwords for app security 
+- **Passport**: Express-compatible authentication middleware for Node.js 
+- **Multer Middleware**: Node.js middleware for handling multipart/form-data primarily used for file uploading
+- **Cloudinary**: cloud-based image and video management service
+- **MapBox**: location data platform for mobile/web apps
+- **Joi**: sanitizing HTML 
+- **Helmet**: secures Express app by setting various HTTP headers
+- **MongoDB Atlas Database**: multi-cloud database service 
+- **Connect-Mongo**: MongoDB session store for Connect and Express written in Typescript 
+- **Heroku**: cloud platform for app deployment and running
 
 See all dependencies in /package.json.
 
