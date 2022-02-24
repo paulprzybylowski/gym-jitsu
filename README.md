@@ -41,6 +41,7 @@ Live app demo hosted on Heroku [here](). Screencast available in my portfolio [h
 
 The following technologies were used in building this web app:
 
+- NodeJS & NPM
 - HTML 5 / CSS 3
 - JavaScript ES6
 - Express.js @4.17.1
@@ -50,11 +51,11 @@ The following technologies were used in building this web app:
 - Mongoose @6.0.13
 - Helmet @5.0.2
 - Joi @17.4.2
-- Passport authentication
-- MapBox API
-- Cloudinary API
+- Passport Authentication
+- MapBox API for Geocoding & Maps
+- Cloudinary API for Image Upload
 
-See all dependencies in package.json.
+See all dependencies in /package.json.
 
 ## Features
 
